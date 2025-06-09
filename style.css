@@ -1,0 +1,83 @@
+/* Basic Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #FDF5E6; /* Oldlace - a warm, soft white */
+    color: #5D5C61; /* Soft charcoal for text */
+    
+    /* Centering the content-wrapper */
+    display: grid; /* Or flex */
+    place-items: center; /* Shorthand for align-items: center; justify-items: center; */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    padding: 20px; /* Add some padding around the content on small screens */
+}
+
+.content-wrapper {
+    background-color: #FFFFFF; /* Clean white for the content area */
+    padding: 30px 40px;
+    border-radius: 15px; /* Softer corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally within the wrapper */
+    gap: 25px; /* Space between button and paragraphs */
+    text-align: center;
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Max width for larger screens */
+}
+
+button {
+    background-color: #7FB7BE; /* Calming teal/blue */
+    color: white;
+    font-family: inherit; /* Use the body's font */
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px; /* Pill shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(127, 183, 190, 0.3); /* Subtle shadow related to button color */
+}
+
+button:hover {
+    background-color: #6DA6AD; /* Slightly darker on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+    transform: translateY(0); /* Press down effect */
+    background-color: #5A8F96;
+}
+
+#quote,
+#mood {
+    background-color: #F8F5F1; /* A slightly off-white, matching well with body */
+    color: #4A4A4A; /* Darker grey for good contrast */
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.05em;
+    line-height: 1.6;
+    min-width: 200px; /* Ensure some width when text is short */
+    width: 100%; /* Take full width of parent (content-wrapper padding will control actual size) */
+    
+    /* For initial hiding and smooth appearance */
+    visibility: hidden; /* Hidden but takes up space */
+    opacity: 0;
+    transform: translateY(15px); /* Start slightly down */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0s 0.3s;
+}
+
+#quote.visible,
+#mood.visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s 0.1s ease-out, transform 0.4s 0.1s ease-out; /* Staggered appearance */
+}

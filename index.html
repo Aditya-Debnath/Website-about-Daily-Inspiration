@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Inspiration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content-wrapper">
+        <button onclick="inspireMe()">Inspire Me</button>
+        <p id="quote"></p>
+        <p id="mood"></p>
+    </div>
+
+<script>
+ let quotes = [
+  "Keep pushing forward!",
+  "You're capable of amazing things.",
+  "Believe in yourself.",
+  "Great things take time.",
+  "Stay positive, work hard.",
+  "The only way to do great work is to love what you do.",
+  "Every day is a new beginning.",
+  "Small steps lead to big changes.",
+  "It’s okay to rest — you’ll rise stronger.",
+  "Dream bikes, code bugs, and midnight thoughts — you’re doing fine.",
+  "Not every day has to be perfect to be valuable.",
+  "You’ve survived 100% of your bad days. You’ll survive this too.",
+  "Friendships are your secret strength, never forget that.",
+  "The future is uncertain, and that’s what makes it exciting.",
+  "Stay grounded, but never stop reaching for what’s next.",
+  "You’re not behind; you’re on your own timeline.",
+  "Some chapters hurt, but they build better stories.",
+  "Choose peace over proving a point.",
+  "Coding frustrations today, breakthroughs tomorrow.",
+  "Your worth isn’t measured by GPA or grades."
+];
+
+ let moods = [
+  "Take a walk 🍃",
+  "Drink water 💧",
+  "Call a friend ☎️",
+  "Stretch for 5 mins 🧘",
+  "Watch a tech video 📱",
+  "Listen to calm music 🎶",
+  "Read a chapter of a book 📖",
+  "Practice mindfulness for 2 mins ✨",
+  "Plan your dream bike ride 🏍️",
+  "Recall a good memory with a friend 🤝",
+  "Code something random for fun 👨‍💻",
+  "Clean your desk for a fresh start ✨",
+  "Text someone you miss 💌",
+  "Sit by the window and breathe in silence 🌸",
+  "Scroll through memes for 5 mins 😆",
+  "Jot down a quick life goal 📔",
+  "Update your playlist with new vibes 🎵",
+  "Watch a motivational clip on YouTube 📺",
+  "Re-read a message that once made you smile 📱",
+  "Walk alone for 10 mins and watch the sky 🌆"
+];
+
+
+  const quoteEl = document.getElementById("quote");
+  const moodEl = document.getElementById("mood");
+
+  function inspireMe() {
+    // Hide old quotes with a fade-out effect if they are already visible
+    if (quoteEl.classList.contains("visible")) {
+        quoteEl.classList.remove("visible");
+        moodEl.classList.remove("visible");
+
+        // Wait for fade-out transition to complete before updating text and fading in
+        setTimeout(() => {
+            updateAndShowContent();
+        }, 300); // Match this with CSS transition duration
+    } else {
+        updateAndShowContent();
+    }
+  }
+
+  function updateAndShowContent() {
+    let quote = quotes[Math.floor(Math.random() * quotes.length)];
+    let mood = moods[Math.floor(Math.random() * moods.length)];
+
+    quoteEl.innerText = quote;
+    moodEl.innerText = mood;
+
+    // Add 'visible' class to trigger fade-in and appearance
+    // Use a slight delay to ensure CSS transitions apply correctly after potential display changes
+    setTimeout(() => {
+        quoteEl.classList.add("visible");
+        moodEl.classList.add("visible");
+    }, 10); 
+  }
+</script>
+
+</body>
+</html>
