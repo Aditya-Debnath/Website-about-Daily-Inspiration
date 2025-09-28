@@ -33,7 +33,7 @@ Website-about-Daily-Inspiration/
 
 ## 📖 How to Use
 
-1. [Open index.html](index.html)
+1. [Click here to see the website](https://aditya-debnath.github.io/Website-about-Daily-Inspiration/)
 2. Click the **Inspire Me** button to get a new motivational quote and mood suggestion.
 
 ---
