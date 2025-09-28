@@ -33,13 +33,8 @@ Website-about-Daily-Inspiration/
 
 ## 📖 How to Use
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Aditya-Debnath/Website-about-Daily-Inspiration.git
-   ```
-2. Open `index.html` in your browser.
-3. Click the **Inspire Me** button to get a new motivational quote and mood suggestion.
+1. [Open index.html](index.html)
+2. Click the **Inspire Me** button to get a new motivational quote and mood suggestion.
 
 ---
 
@@ -51,23 +46,4 @@ Website-about-Daily-Inspiration/
 * Add background themes that change with moods.
 
 ---
-
-## 📷 Demo
-
-*(Add screenshot or live demo link here if available)*
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork the project, open issues, or submit pull requests to improve the app.
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** – free to use and modify.
-
----
-
 💡 *“Your daily dose of positivity, one click away.”*
