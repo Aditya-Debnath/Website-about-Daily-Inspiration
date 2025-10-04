@@ -17,7 +17,7 @@ A simple web app that displays **random motivational quotes** and **random mood 
 
 ```
 Website-about-Daily-Inspiration/
-│── index.html   # Main HTML file  
+│── index.html   # Main HTML file including JavaScript  
 │── style.css    # Stylesheet for design and layout  
 ```
 
