@@ -40,10 +40,10 @@ Website-about-Daily-Inspiration/
 
 ## 🌱 Future Improvements
 
-* Add an another JavaScript file to handle random quote/mood generation.
+* Add a specific JavaScript file to handle random quote/mood generation.
 * Connect with an external quotes API for more variety.
 * Allow users to save favorite quotes.
-* Add background themes that change with moods.
+* Add background themes and background musics that change with moods.
 
 ---
 💡 *“Your daily dose of positivity, one click away.”*
